@@ -1,22 +1,21 @@
 module.exports = function (config) {
   config.set({
     browsers: ['PhantomJS'],
-    files: [
-      { pattern: 'test/runner.js', watched: false }
-    ],
+    files: [ 'src/*_spec.js' ],
     frameworks: [
       'jasmine',
       'sinon'
     ],
     //singleRun: true,
     preprocessors: {
-      'test/runner.js': ['webpack']
+      'src/*_spec.js': [ 'webpack' ]
     },
     webpack: {
-      watch: true
-    },
-    webpackServer: {
-      noInfo: true
+      cache: true,
+      resolve: {
+        extensions: ['', '.js'],
+        modulesDirectories: ['node_modules']
+      }
     }
   });
 };

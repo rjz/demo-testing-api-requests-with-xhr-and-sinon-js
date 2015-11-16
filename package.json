@@ -4,9 +4,9 @@
   "description": "Demo: testing API requests with XHR and sinon.js",
   "main": "index.js",
   "scripts": {
-    "pretest": "./node_modules/.bin/jshint ./src",
-    "test": "./node_modules/karma/bin/karma start ./karma.config.js",
-    "build": "./node_modules/.bin/webpack"
+    "pretest": "jshint ./src",
+    "test": "karma start ./karma.config.js --single-run",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -22,14 +22,13 @@
     "jasmine": "2.3.1",
     "jasmine-core": "2.3.0",
     "jshint": "2.7.0",
-    "karma": "0.12.31",
+    "karma": "^0.13.15",
     "karma-jasmine": "0.3.5",
     "karma-phantomjs-launcher": "0.1.4",
     "karma-sinon": "1.0.4",
-    "karma-webpack": "1.5.1",
+    "karma-webpack": "^1.7.0",
     "sinon": "1.14.1",
-    "webpack": "1.9.10"
+    "webpack": "^1.12.6"
   },
   "dependencies": {}
 }
-
